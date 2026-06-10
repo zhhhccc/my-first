@@ -47,3 +47,12 @@ class ExamSys:
             list.append('考场座位号：'+str(a)+'\n'+'姓名：'+self.data[str(i)][1]+'\n'+'学号：'+self.data[str(i)][4])
             a+=3
         return(list)
+
+    def generate_list(self):
+        a = 1
+        list = []
+        g = open("考场安排表.txt", 'w')
+        for i in random.sample(range(2001101, 2001111), 10):
+            list.append('考场座位号：' + str(a) + '\n' + '姓名：' + self.data[str(i)][1] + '\n' + '学号：' + self.data[str(i)][4])
+            a += 3
+        return (list)
