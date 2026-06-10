@@ -37,3 +37,13 @@ class ExamSys:
             for i in random.sample(range(2001101, 2001111), int(num)):
                 print(str(a) + '. ' + self.data[str(i)][1] + ' ' + self.data[str(i)][4])
                 a += 1
+
+    def generate_exam_arrangement(self):
+        a=1
+        list=[]
+        g=open("考场安排表.txt",'w')
+        for i in random.sample(range(2001101, 2001111),10):
+            g.write(str(a)+'，'+self.data[str(i)][1]+'，'+self.data[str(i)][4]+'\n')
+            list.append('考场座位号：'+str(a)+'\n'+'姓名：'+self.data[str(i)][1]+'\n'+'学号：'+self.data[str(i)][4])
+            a+=3
+        return(list)
