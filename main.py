@@ -13,7 +13,7 @@ def run():
     elif num==3:
         list.extend(a.generate_exam_arrangement())
     elif num==4:
-        list.extend(a.generate_list())
+        list.extend(a.generate_exam_arrangement())
         generate_admission_tickets(list)
     elif num==0:
         print("结束")
